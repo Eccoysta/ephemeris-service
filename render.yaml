@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ephemeris-service
+    env: docker
+    region: frankfurt
+    plan: free
+    rootDir: .
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
